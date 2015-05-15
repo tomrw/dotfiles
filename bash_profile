@@ -44,6 +44,7 @@ alias ad="git add"
 alias c="git commit -m"
 alias b="git branch"
 alias gfo="git fetch origin"
+alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 
 alias gbd="grunt build-dev"
 alias ..="cd .."
