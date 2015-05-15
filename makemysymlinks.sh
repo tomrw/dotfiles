@@ -8,8 +8,6 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bash_profile gitignore_global"    # list of files/folders to symlink in homedir
-
 ##########
 
 # create dotfiles_old in homedir
@@ -22,10 +20,12 @@ echo "Changing to the $dir directory"
 cd $dir
 echo "...done"
 
+cd files
+
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
-for file in $files; do
+for file in * ; do
     echo "Moving any existing dotfiles from ~ to $olddir"
     mv ~/.$file ~/dotfiles_old/
     echo "Creating symlink to $file in home directory."
-    ln -s $dir/$file ~/.$file
+    ln -s $dir/files/$file ~/.$file
 done

@@ -53,5 +53,5 @@ alias gt="grunt test"
 alias nt="npm test"
 alias wt="npm run watch-tests"
 
-alias bp="~/git-pull.sh"
+alias bp="~/.git-pull"
 alias check2="check --env chat.dev"
