@@ -1,4 +1,4 @@
-. .sens
+. ~/.sens
 
 [[ -s ~/tools/z/z.sh ]] && source ~/tools/z/z.sh
 
