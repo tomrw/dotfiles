@@ -38,7 +38,6 @@ cs () {
 
 	if [ "$branch" != "master" ]; then
 		git commit -m "[$branch]$msg"
-		echo "[$branch]$msg"
 	fi
 }
 
