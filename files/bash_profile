@@ -22,6 +22,26 @@ killPort() {
 	lsof -i TCP:$1 | awk '/LISTEN/{print $2}' | xargs kill -9
 }
 
+cs () {
+	if [ "$1" = "" ]; then
+		echo "Please supply a commit message"
+		return 0
+	fi
+
+	branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
+	msg=""
+
+	for arg in "$@"
+	do
+		msg+=" $arg"
+	done
+
+	if [ "$branch" != "master" ]; then
+		git commit -m "[$branch]$msg"
+		echo "[$branch]$msg"
+	fi
+}
+
 alias s="git status"
 alias co="git checkout"
 alias p="git pull"
