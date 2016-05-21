@@ -78,3 +78,6 @@ alias su="sublime ."
 
 alias bp="~/.git-pull"
 alias bs="~/.git-status"
+
+export NVM_DIR="/Users/tomrw/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
