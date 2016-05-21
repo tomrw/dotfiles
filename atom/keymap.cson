@@ -1,0 +1,4 @@
+'atom-text-editor':
+    'cmd-k right': 'pane:split-right',
+    'ctrl-alt-cmd-left': 'move-panes:move-left',
+    'ctrl-alt-cmd-right': 'move-panes:move-right'
