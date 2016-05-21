@@ -1,8 +1,0 @@
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-defaults write com.apple.finder AppleShowAllFiles YES
-
-npm config set default 0
-npm config set spin=false
-npm set progress=false
-
-curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
