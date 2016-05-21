@@ -1,0 +1,25 @@
+"*":
+  "command-palette":
+    preserveLastSearch: true
+  core:
+    audioBeep: false
+  editor:
+    fontSize: 13
+    invisibles: {}
+    lineHeight: 1.4
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "dd6b9ad2-2f26-d0ec-5a60-4ebac8c95206"
+  "line-ending-selector":
+    defaultLineEnding: "LF"
+  linter:
+    errorPanelHeight: 130
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+    squashDirectoryNames: true
+  welcome:
+    showOnStartup: false
