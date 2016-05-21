@@ -6,8 +6,8 @@
 
 ########## Variables
 
-dir=~/dotfiles                    # dotfiles directory
-olddir=~/dotfiles_old             # old dotfiles backup directory
+dir=~/dotfiles					# dotfiles directory
+olddir=~/dotfiles_old			 # old dotfiles backup directory
 ##########
 
 # create dotfiles_old in homedir
@@ -20,12 +20,12 @@ echo "Changing to the $dir directory"
 cd $dir
 echo "...done"
 
-cd files
+cd symlinks
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks
 for file in * ; do
-    echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
-    echo "Creating symlink to $file in home directory."
-    ln -s $dir/files/$file ~/.$file
+	echo "Moving any existing dotfiles from ~ to $olddir"
+	mv ~/.$file ~/dotfiles_old/
+	echo "Creating symlink to $file in home directory."
+	ln -s $dir/symlinks/$file ~/.$file
 done
