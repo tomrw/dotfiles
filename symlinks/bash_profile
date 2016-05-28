@@ -81,3 +81,5 @@ alias bs="~/.git-status"
 
 export NVM_DIR="/Users/tomrw/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+export PATH="./node_modules/.bin:$PATH"
