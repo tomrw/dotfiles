@@ -2,24 +2,42 @@
   "command-palette":
     preserveLastSearch: true
   core:
-    audioBeep: false
+    disabledPackages: [
+      "language-ruby-on-rails"
+      "language-ruby"
+      "language-python"
+      "language-php"
+      "language-perl"
+      "language-objective-c"
+      "language-mustache"
+      "language-make"
+      "language-less"
+      "language-go"
+      "language-toml"
+      "atom-ternjs"
+      "linter-jscs"
+    ]
+    openEmptyEditorOnStart: false
+    packagesWithKeymapsDisabled: [
+      "move-panes"
+    ]
   editor:
-    fontSize: 13
-    invisibles: {}
     lineHeight: 1.4
+    preferredLineLength: 1
     scrollPastEnd: true
-    showIndentGuide: true
     showInvisibles: true
     tabLength: 4
   "exception-reporting":
-    userId: "dd6b9ad2-2f26-d0ec-5a60-4ebac8c95206"
-  "line-ending-selector":
-    defaultLineEnding: "LF"
+    userId: "e2875727-5b14-b292-bfca-d5eca82b3f54"
+  "highlight-selected": {}
   linter:
-    errorPanelHeight: 130
+    errorPanelHeight: 32
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
-    squashDirectoryNames: true
   welcome:
     showOnStartup: false
+".ini.source":
+  editor:
+    preferredLineLength: 1
+    tabLength: 4
