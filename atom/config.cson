@@ -16,6 +16,14 @@
       "language-toml"
       "atom-ternjs"
       "linter-jscs"
+      "block-comment-lines"
+      "expose"
+      "pigments"
+      "language-clojure"
+      "language-c"
+      "language-csharp"
+      "language-sql"
+      "language-yaml"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
