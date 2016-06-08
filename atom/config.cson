@@ -14,7 +14,6 @@
       "language-less"
       "language-go"
       "language-toml"
-      "atom-ternjs"
       "linter-jscs"
       "block-comment-lines"
       "expose"
@@ -45,6 +44,8 @@
     hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
 ".ini.source":
   editor:
     preferredLineLength: 1
