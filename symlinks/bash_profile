@@ -47,6 +47,12 @@ pnb() {
 	git push -u origin $branch
 }
 
+rsh() {
+	branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
+
+	git reset --hard origin/$branch
+}
+
 alias s="git status"
 alias co="git checkout"
 alias p="git pull"
