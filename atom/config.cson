@@ -23,6 +23,7 @@
       "language-csharp"
       "language-sql"
       "language-yaml"
+      "metrics"
     ]
     openEmptyEditorOnStart: false
     packagesWithKeymapsDisabled: [
