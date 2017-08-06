@@ -44,7 +44,7 @@ lc() {
 
 	for arg in "$@"
 	do
-		msg+=" $arg"
+		msg+="$arg "
 	done
 
 	git commit -m "$msg"
