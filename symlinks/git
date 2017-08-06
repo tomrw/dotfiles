@@ -33,7 +33,6 @@ lc() {
 		return 0
 	fi
 
-	branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
 	msg=""
 
 	for arg in "$@"
