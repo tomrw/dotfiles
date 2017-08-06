@@ -22,7 +22,7 @@ killPort() {
 	lsof -i TCP:$1 | awk '/LISTEN/{print $2}' | xargs kill -9
 }
 
-cs () {
+cs() {
 	if [ "$1" = "" ]; then
 		echo "Please supply a commit message"
 		return 0
