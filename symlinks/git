@@ -39,7 +39,7 @@ lc() {
 		return 0
 	fi
 
-	msg=""
+	local msg=""
 
 	for arg in "$@"
 	do
@@ -55,8 +55,8 @@ cs() {
 		return 0
 	fi
 
-	branch=$(getBranch)
-	msg=""
+	local branch=$(getBranch)
+	local msg=""
 
 	for arg in "$@"
 	do
@@ -71,13 +71,13 @@ cs() {
 }
 
 pnb() {
-	branch=$(getBranch)
+	local branch=$(getBranch)
 
 	git push -u origin $branch
 }
 
 rsh() {
-	branch=$(getBranch)
+	local branch=$(getBranch)
 
 	git reset --hard origin/$branch
 }
