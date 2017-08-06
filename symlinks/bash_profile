@@ -19,9 +19,7 @@ killPort() {
 	lsof -i TCP:$1 | awk '/LISTEN/{print $2}' | xargs kill -9
 }
 
-alias gbd="grunt build-dev"
 alias ..="cd .."
-alias gt="grunt test"
 alias nt="npm test"
 alias wt="npm run watch-tests"
 alias rw="npm run watch"
