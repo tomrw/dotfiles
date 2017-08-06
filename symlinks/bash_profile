@@ -22,6 +22,24 @@ killPort() {
 	lsof -i TCP:$1 | awk '/LISTEN/{print $2}' | xargs kill -9
 }
 
+# lc - Lazy Commit
+lc() {
+	if [ "$1" = "" ]; then
+		echo "Please supply a commit message"
+		return 0
+	fi
+
+	branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
+	msg=""
+
+	for arg in "$@"
+	do
+		msg+=" $arg"
+	done
+
+	git commit -m "$msg"
+}
+
 cs() {
 	if [ "$1" = "" ]; then
 		echo "Please supply a commit message"
