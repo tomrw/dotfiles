@@ -1,0 +1,76 @@
+#!/bin/bash
+
+if [ -f ~/.git-completion.bash ]; then
+	. ~/.git-completion.bash
+fi
+
+alias s="git status"
+alias co="git checkout"
+alias p="git pull"
+alias d="git diff"
+alias dw="git diff --color-words --word-diff-regex='\\w+|[^[:space:]]'"
+alias dc="d --cached"
+alias dwc="dw --cached"
+alias a="git add ."
+alias ad="git add"
+alias c="git commit -m"
+alias b="git branch"
+alias gfo="git fetch origin"
+alias lg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias sp="git show -p"
+alias gm="git merge"
+alias ri="git rebase -i"
+alias com="git checkout master"
+alias clearAllBranches="git branch --merged | grep -v \* | xargs git branch -D"
+alias who="git shortlog -s --"
+alias bp="~/.git-pull"
+alias bs="~/.git-status"
+
+# lc - Lazy Commit
+lc() {
+	if [ "$1" = "" ]; then
+		echo "Please supply a commit message"
+		return 0
+	fi
+
+	branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
+	msg=""
+
+	for arg in "$@"
+	do
+		msg+=" $arg"
+	done
+
+	git commit -m "$msg"
+}
+
+cs() {
+	if [ "$1" = "" ]; then
+		echo "Please supply a commit message"
+		return 0
+	fi
+
+	branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
+	msg=""
+
+	for arg in "$@"
+	do
+		msg+=" $arg"
+	done
+
+	if [ "$branch" != "master" ]; then
+		git commit -m "[$branch]$msg"
+	fi
+}
+
+pnb() {
+	branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
+
+	git push -u origin $branch
+}
+
+rsh() {
+	branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
+
+	git reset --hard origin/$branch
+}
