@@ -11,5 +11,11 @@
 	* Atom -> Install shell commands
 * VS Code
 	* Command palette -> Install 'code' command in PATH
+	* Extensions to install:
+		* Atom Keymap
+		* Editor config
+		* ESLint
+		* Path Intellisense
+		* Project manager
 * Git
 * Create a file called `~/.sens`

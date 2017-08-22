@@ -2,5 +2,8 @@
     "workbench.startupEditor": "newUntitledFile",
     "editor.minimap.enabled": false,
     "editor.insertSpaces": false,
-    "workbench.editor.enablePreview": false
+    "workbench.editor.enablePreview": false,
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true
 }
