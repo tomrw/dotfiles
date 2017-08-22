@@ -29,6 +29,7 @@
     packagesWithKeymapsDisabled: [
       "move-panes"
     ]
+    telemetryConsent: "no"
   editor:
     lineHeight: 1.4
     preferredLineLength: 1
