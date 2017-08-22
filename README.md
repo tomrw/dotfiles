@@ -9,6 +9,8 @@
 	* https://github.com/creationix/nvm#installation
 * Enable APM
 	* Atom -> Install shell commands
+	* Generate API token:
+		* https://atom.io/account
 * VS Code
 	* Command palette -> Install 'code' command in PATH
 	* Extensions to install:
