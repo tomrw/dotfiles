@@ -20,4 +20,6 @@
 		* Path Intellisense
 		* Project manager
 * Git
+* iTerm
+	* Preferences -> Load preferences from a custom folder or URL
 * Create a file called `~/.sens`
