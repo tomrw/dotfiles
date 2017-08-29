@@ -5,5 +5,16 @@
     "workbench.editor.enablePreview": false,
     "atomKeymap.promptV3Features": true,
     "editor.multiCursorModifier": "ctrlCmd",
-    "editor.formatOnPaste": true
+    "editor.formatOnPaste": true,
+    "editor.renderWhitespace": "all",
+    "files.trimTrailingWhitespace": true,
+    "files.exclude": {
+        "coverage": true,
+        "node_modules": true,
+        "production": true
+    },
+    "window.zoomLevel": 0,
+    "editor.tabCompletion": false,
+    "workbench.activityBar.visible": true,
+    "editor.fontSize": 14
 }
