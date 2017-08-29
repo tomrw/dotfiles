@@ -11,7 +11,8 @@
     "files.exclude": {
         "coverage": true,
         "node_modules": true,
-        "production": true
+        "production": true,
+        ".vscode": true
     },
     "window.zoomLevel": 0,
     "editor.tabCompletion": false,
