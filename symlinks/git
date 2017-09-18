@@ -89,5 +89,5 @@ testAll() {
 		return 0
 	fi
 
-	git rebase -i --exec "npm t" $1
+	git rebase --exec "npm t" $1
 }
