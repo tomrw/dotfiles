@@ -82,3 +82,12 @@ rsh() {
 
 	git reset --hard origin/$branch
 }
+
+testAll() {
+	if [ "$1" = "" ]; then
+		echo "Please supply a commit hash"
+		return 0
+	fi
+
+	git rebase -i --exec "npm t" $1
+}
