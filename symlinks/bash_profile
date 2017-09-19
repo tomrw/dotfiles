@@ -19,6 +19,10 @@ killPort() {
 	lsof -i TCP:$1 | awk '/LISTEN/{print $2}' | xargs kill -9
 }
 
+dnv() {
+	nvm alias default $1
+}
+
 alias ..="cd .."
 alias nt="npm test"
 alias wt="npm run watch-tests"
