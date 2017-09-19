@@ -65,7 +65,7 @@ cs() {
 	done
 
 	if [ "$branch" != "master" ]; then
-		git commit -m "[$branch]$msg"
+		git commit -m "$branch:$msg"
 	else
 		echo "Not commiting as story - On master"
 	fi
