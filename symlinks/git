@@ -91,3 +91,9 @@ testAll() {
 
 	git rebase --exec "npm t" $1
 }
+
+testBranchCommits() {
+	local head=$(git rev-parse origin/HEAD)
+
+	git rebase --exec "npm t" $head
+}
