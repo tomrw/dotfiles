@@ -2,6 +2,7 @@
 
 . ~/.sens
 . ~/dotfiles/symlinks/git
+. ~/dotfiles/npm/npm-completion.sh
 
 [[ -s ~/tools/z/z.sh ]] && source ~/tools/z/z.sh
 
