@@ -1,8 +1,8 @@
 #!/bin/bash
 
 . ~/.sens
-. ~/dotfiles/symlinks/git
-. ~/dotfiles/npm/npm-completion.sh
+. ~/dotfiles/scripts/git.sh
+. ~/dotfiles/scripts/npm-completion.sh
 
 [[ -s ~/tools/z/z.sh ]] && source ~/tools/z/z.sh
 

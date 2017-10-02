@@ -23,8 +23,8 @@ alias ri="git rebase -i"
 alias com="git checkout master"
 alias clearAllBranches="git branch --merged | grep -v \* | xargs git branch -D"
 alias who="git shortlog -s --"
-alias bp="~/.git-pull"
-alias bs="~/.git-status"
+alias bp="~/dotfiles/scripts/git-pull.sh"
+alias bs="~/dotfiles/scripts/git-status.sh"
 alias amend="git commit --amend"
 
 getBranch() {
