@@ -2,6 +2,7 @@
 
 . ~/.sens
 . ~/dotfiles/scripts/git.sh
+. ~/dotfiles/scripts/npm.sh
 . ~/dotfiles/scripts/npm-completion.sh
 
 [[ -s ~/tools/z/z.sh ]] && source ~/tools/z/z.sh
@@ -27,12 +28,6 @@ dnv() {
 }
 
 alias ..="cd .."
-alias nt="npm test"
-alias wt="npm run watch-tests"
-alias rw="npm run watch"
-alias ns="npm start"
-alias nl="npm run lint"
-
 alias su="sublime ."
 
 export NVM_DIR=~/.nvm
