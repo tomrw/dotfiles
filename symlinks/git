@@ -97,3 +97,13 @@ testBranchCommits() {
 
 	git rebase --exec "npm t" $head
 }
+
+commitDiff() {
+	local branch=${1:-$(getBranch)}
+	local behind=$(git rev-list --left-only --count master...$branch)
+	local ahead=$(git rev-list --right-only --count master...$branch)
+	local green='\033[0;32m'
+	local NC='\033[0m'
+
+	echo -e "$branch is ${green}$behind${NC} commits behind master and ${green}$ahead${NC} commits ahead of master"
+}
