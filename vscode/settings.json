@@ -12,10 +12,13 @@
         "coverage": true,
         "node_modules": true,
         "production": true,
-        ".vscode": true
+        ".vscode": true,
+        "dist": true
     },
     "window.zoomLevel": 0,
     "editor.tabCompletion": false,
     "workbench.activityBar.visible": true,
-    "editor.fontSize": 15
+    "editor.fontSize": 15,
+    "vim.disableAnnoyingNeovimMessage": true,
+    "projectManager.sortList": "Recent"
 }
