@@ -20,5 +20,6 @@
     "workbench.activityBar.visible": true,
     "editor.fontSize": 15,
     "vim.disableAnnoyingNeovimMessage": true,
-    "projectManager.sortList": "Recent"
+    "projectManager.sortList": "Recent",
+    "files.insertFinalNewline": true
 }
