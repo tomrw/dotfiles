@@ -34,3 +34,8 @@ export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 export PATH="./node_modules/.bin:$PATH"
+
+export GITAWAREPROMPT=~/dotfiles/plugins/git-aware-prompt
+source "${GITAWAREPROMPT}/main.sh"
+
+export PS1="\u@\h \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
