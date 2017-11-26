@@ -5,8 +5,6 @@
 . ~/dotfiles/scripts/npm.sh
 . ~/dotfiles/scripts/npm-completion.sh
 
-[[ -s ~/tools/z/z.sh ]] && source ~/tools/z/z.sh
-
 md() {
 	mkdir -p "$@" && cd "$@";
 }
@@ -37,5 +35,7 @@ export PATH="./node_modules/.bin:$PATH"
 
 export GITAWAREPROMPT=~/dotfiles/plugins/git-aware-prompt
 source "${GITAWAREPROMPT}/main.sh"
+
+[[ -s ~/dotfiles/plugins/z/z.sh ]] && source ~/dotfiles/plugins/z/z.sh
 
 export PS1="\u@\h \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "

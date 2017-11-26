@@ -12,3 +12,9 @@ if [ ! -d git-aware-prompt ]; then
 else
 	echo "Not cloning git-aware-promt plugin - already exists"
 fi
+
+if [ ! -d z ]; then
+	git clone git@github.com:rupa/z.git
+else
+	echo "Not cloning z - already exists"
+fi
