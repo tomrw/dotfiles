@@ -21,5 +21,7 @@
     "editor.fontSize": 15,
     "vim.disableAnnoyingNeovimMessage": true,
     "projectManager.sortList": "Recent",
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "eslint.autoFixOnSave": true,
+    "explorer.openEditors.visible": 0
 }
