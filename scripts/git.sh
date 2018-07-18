@@ -107,3 +107,10 @@ commitDiff() {
 
 	echo -e "$branch is ${green}$behind${NC} commits behind master and ${green}$ahead${NC} commits ahead of master"
 }
+
+removeAllTags() {
+	git tag -l | xargs git tag -d
+	git fetch
+	git tag -l | xargs -n 1 git push --delete origin
+	git tag -l | xargs git tag -d
+}
