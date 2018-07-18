@@ -26,6 +26,8 @@ dnv() {
 }
 
 alias ..="cd .."
+alias 2..=".. && .."
+alias 3..=".. && .. && .."
 alias su="sublime ."
 
 export NVM_DIR=~/.nvm
