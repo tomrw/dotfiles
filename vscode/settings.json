@@ -13,7 +13,9 @@
         "node_modules": true,
         "production": true,
         ".vscode": true,
-        "dist": true
+        "dist": true,
+        "ios": true,
+        "android": true
     },
     "window.zoomLevel": 0,
     "editor.tabCompletion": false,
@@ -23,5 +25,6 @@
     "projectManager.sortList": "Recent",
     "files.insertFinalNewline": true,
     "eslint.autoFixOnSave": true,
-    "explorer.openEditors.visible": 0
+    "explorer.openEditors.visible": 0,
+    "extensions.ignoreRecommendations": false
 }
