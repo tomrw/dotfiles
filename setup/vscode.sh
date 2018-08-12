@@ -9,7 +9,8 @@ declare -a vsCodeExtensions=(
 	"dbaeumer.vscode-eslint"
 	"lukehoban.Go"
 	"ms-vscode.atom-keybindings"
-	"vscodevim.vim"
+	"vscodevim.vim",
+	"wix.vscode-import-cost"
 )
 
 for extension in "${vsCodeExtensions[@]}"
