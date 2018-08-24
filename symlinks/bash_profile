@@ -1,17 +1,10 @@
 #!/bin/bash
 
 . ~/.sens
+. ~/dotfiles/scripts/bash.sh
 . ~/dotfiles/scripts/git.sh
-. ~/dotfiles/scripts/npm.sh
 . ~/dotfiles/scripts/npm-completion.sh
-
-md() {
-	mkdir -p "$@" && cd "$@";
-}
-
-untar() {
-	tar -zxvf $1
-}
+. ~/dotfiles/scripts/npm.sh
 
 killPort() {
 	if [ -z "$1" ]; then
@@ -24,11 +17,6 @@ killPort() {
 dnv() {
 	nvm alias default $1
 }
-
-alias ..="cd .."
-alias 2..=".. && .."
-alias 3..=".. && .. && .."
-alias su="sublime ."
 
 export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
