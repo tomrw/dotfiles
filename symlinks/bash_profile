@@ -2,6 +2,7 @@
 
 . ~/.sens
 . ~/dotfiles/scripts/bash.sh
+. ~/dotfiles/scripts/docker.sh
 . ~/dotfiles/scripts/git.sh
 . ~/dotfiles/scripts/npm-completion.sh
 . ~/dotfiles/scripts/npm.sh
