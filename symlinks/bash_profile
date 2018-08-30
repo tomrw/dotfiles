@@ -6,6 +6,7 @@
 . ~/dotfiles/scripts/git.sh
 . ~/dotfiles/scripts/npm-completion.sh
 . ~/dotfiles/scripts/npm.sh
+. ~/dotfiles/scripts/yarn.sh
 
 killPort() {
 	if [ -z "$1" ]; then
