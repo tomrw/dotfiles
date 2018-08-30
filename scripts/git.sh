@@ -95,7 +95,7 @@ testAll() {
 testBranchCommits() {
 	local head=$(git rev-parse origin/HEAD)
 
-	git rebase --exec "npm t" $head
+	git rebase --exec "npm run lint && npm t" $head
 }
 
 commitDiff() {
