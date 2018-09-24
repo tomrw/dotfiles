@@ -73,6 +73,26 @@ cs() {
 	fi
 }
 
+nj() {
+	if [ "$1" = "" ]; then
+		echo "Please supply a commit message"
+		return 0
+	fi
+
+	local msg=""
+
+	for arg in "$@"
+	do
+		msg+=" $arg"
+	done
+
+	if [ "$branch" != "master" ]; then
+		git commit -m "NOJIRA:$msg"
+	else
+		echo "Not commiting as story - On master"
+	fi
+}
+
 pnb() {
 	local branch=$(getBranch)
 
