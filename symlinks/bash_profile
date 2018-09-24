@@ -20,6 +20,17 @@ dnv() {
 	nvm alias default $1
 }
 
+batchExec() {
+	local args=""
+
+	for arg in "$@"
+	do
+		args+=" $arg"
+	done
+
+	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && $args" \;
+}
+
 export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
