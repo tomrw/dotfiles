@@ -26,6 +26,7 @@ alias who="git shortlog -s --"
 alias bp="~/dotfiles/scripts/git-pull.sh"
 alias bs="~/dotfiles/scripts/git-status.sh"
 alias amend="git commit --amend --no-edit"
+alias reword="git commit --amend"
 alias grc="git rebase --continue"
 alias gpf="git push --force-with-lease"
 
