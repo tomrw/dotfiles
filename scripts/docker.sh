@@ -8,3 +8,7 @@ nukeDocker() {
 dockerIp() {
 	docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $1
 }
+
+dockerInspect() {
+	docker exec -it $1 ash
+}
