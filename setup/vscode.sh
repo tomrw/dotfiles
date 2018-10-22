@@ -2,15 +2,22 @@ mv ~/Library/Application\ Support/Code/User/settings.json ~/Library/Application\
 ln -s ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 
 declare -a vsCodeExtensions=(
-	"EditorConfig.EditorConfig"
-	"alefragnani.project-manager"
-	"christian-kohler.npm-intellisense"
-	"christian-kohler.path-intellisense"
-	"dbaeumer.vscode-eslint"
-	"lukehoban.Go"
-	"ms-vscode.atom-keybindings"
+	"alefragnani.project-manager",
+	"christian-kohler.npm-intellisense",
+	"christian-kohler.path-intellisense",
+	"dbaeumer.vscode-eslint",
+	"EditorConfig.EditorConfig",
+	"GitHub.vscode-pull-request-github",
+	"mikestead.dotenv",
+	"ms-vsliveshare.vsliveshare",
+	"redhat.vscode-yaml",
+	"samuelcolvin.jinjahtml",
 	"vscodevim.vim",
-	"wix.vscode-import-cost"
+	"vscoss.vscode-ansible",
+	"waderyan.gitblame",
+	"wix.vscode-import-cost",
+	"xabikos.JavaScriptSnippets",
+	"yzhang.markdown-all-in-one"
 )
 
 for extension in "${vsCodeExtensions[@]}"
