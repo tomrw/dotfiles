@@ -2,9 +2,6 @@
 
 * Homebrew
 	* https://brew.sh/
-* Z
-	* https://github.com/rupa/z
-	* Install to tools/z
 * NVM
 	* https://github.com/creationix/nvm#installation
 * Enable APM
@@ -19,7 +16,6 @@
 		* ESLint
 		* Path Intellisense
 		* Project manager
-* Git
 * iTerm
 	* Preferences -> Load preferences from a custom folder or URL
 * Create a file called `~/.sens`
