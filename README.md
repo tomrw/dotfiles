@@ -10,12 +10,6 @@
 		* https://atom.io/account
 * VS Code
 	* Command palette -> Install 'code' command in PATH
-	* Extensions to install:
-		* Atom Keymap
-		* Editor config
-		* ESLint
-		* Path Intellisense
-		* Project manager
 * iTerm
 	* Preferences -> Load preferences from a custom folder or URL
 * Create a file called `~/.sens`
