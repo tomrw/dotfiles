@@ -10,3 +10,4 @@ alias ..="cd .."
 alias 2..=".. && .."
 alias 3..=".. && .. && .."
 alias su="sublime ."
+alias cat=bat
