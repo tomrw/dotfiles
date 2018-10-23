@@ -27,5 +27,6 @@
     "eslint.autoFixOnSave": true,
     "explorer.openEditors.visible": 0,
     "extensions.ignoreRecommendations": false,
-    "javascript.updateImportsOnFileMove.enabled": "always"
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.commandPalette.preserveInput": true
 }
