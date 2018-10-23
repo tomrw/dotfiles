@@ -19,3 +19,7 @@
 * iTerm
 	* Preferences -> Load preferences from a custom folder or URL
 * Create a file called `~/.sens`
+
+# Setup
+
+`./setup.sh`
