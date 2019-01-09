@@ -29,5 +29,6 @@
     "extensions.ignoreRecommendations": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "workbench.commandPalette.preserveInput": true,
-    "githubPullRequests.telemetry.enabled": false
+    "githubPullRequests.telemetry.enabled": false,
+    "workbench.editor.highlightModifiedTabs": true
 }
