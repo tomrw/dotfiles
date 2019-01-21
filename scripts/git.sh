@@ -140,5 +140,5 @@ removeAllTags() {
 }
 
 createPR() {
-	hub pull-request -c $*
+	hub pull-request $*
 }
