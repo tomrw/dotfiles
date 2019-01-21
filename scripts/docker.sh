@@ -12,3 +12,7 @@ dockerIp() {
 dockerInspect() {
 	docker exec -it $1 ash
 }
+
+dockerRun() {
+	docker run -it $1 sh
+}
