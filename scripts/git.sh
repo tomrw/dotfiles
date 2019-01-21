@@ -29,6 +29,7 @@ alias amend="git commit --amend --no-edit"
 alias reword="git commit --amend"
 alias grc="git rebase --continue"
 alias gpf="git push --force-with-lease"
+alias hash="git rev-parse HEAD"
 
 getBranch() {
 	local branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
