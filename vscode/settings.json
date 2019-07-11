@@ -30,5 +30,6 @@
     "javascript.updateImportsOnFileMove.enabled": "always",
     "workbench.commandPalette.preserveInput": true,
     "githubPullRequests.telemetry.enabled": false,
-    "workbench.editor.highlightModifiedTabs": true
+    "workbench.editor.highlightModifiedTabs": true,
+    "terminal.integrated.fontSize": 15
 }
