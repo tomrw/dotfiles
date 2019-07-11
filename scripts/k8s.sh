@@ -3,5 +3,5 @@ function k8validate() {
 }
 
 function k8cron() {
-	kubectl get cronjob
+	kubectl get cronjob $1
 }
