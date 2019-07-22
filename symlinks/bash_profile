@@ -1,6 +1,7 @@
 #!/bin/bash
 
 . ~/.sens
+. ~/dotfiles/scripts/apple.sh
 . ~/dotfiles/scripts/bash.sh
 . ~/dotfiles/scripts/docker.sh
 . ~/dotfiles/scripts/git.sh
