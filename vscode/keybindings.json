@@ -7,5 +7,15 @@
 	{
 		"key": "cmd+`",
 		"command": "workbench.action.quickSwitchWindow"
+	},
+	{
+		"key": "shift+cmd+/",
+		"command": "editor.action.jumpToBracket",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+cmd+\\",
+		"command": "-editor.action.jumpToBracket",
+		"when": "editorTextFocus"
 	}
 ]
