@@ -32,5 +32,9 @@
     "githubPullRequests.telemetry.enabled": false,
     "workbench.editor.highlightModifiedTabs": true,
     "terminal.integrated.fontSize": 15,
-    "files.autoSave": "onFocusChange"
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnSave": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
