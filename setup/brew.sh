@@ -6,3 +6,4 @@ brew install tree
 brew install fzf
 brew install hub
 brew install pipenv
+brew install nvm

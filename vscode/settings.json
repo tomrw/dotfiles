@@ -17,10 +17,10 @@
         "ios": true,
         "android": true
     },
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "editor.tabCompletion": false,
     "workbench.activityBar.visible": true,
-    "editor.fontSize": 15,
+    "editor.fontSize": 17,
     "vim.disableAnnoyingNeovimMessage": true,
     "projectManager.sortList": "Recent",
     "files.insertFinalNewline": true,
@@ -31,5 +31,10 @@
     "workbench.commandPalette.preserveInput": true,
     "githubPullRequests.telemetry.enabled": false,
     "workbench.editor.highlightModifiedTabs": true,
-    "terminal.integrated.fontSize": 15
+    "terminal.integrated.fontSize": 15,
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnSave": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
