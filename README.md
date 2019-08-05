@@ -12,6 +12,8 @@
 	* Command palette -> Install 'code' command in PATH
 * iTerm
 	* Preferences -> Load preferences from a custom folder or URL
+* Hammerspoon
+  * https://github.com/Hammerspoon/hammerspoon/releases
 * Create a file called `~/.sens`
 
 # Setup
