@@ -31,5 +31,6 @@
     "workbench.commandPalette.preserveInput": true,
     "githubPullRequests.telemetry.enabled": false,
     "workbench.editor.highlightModifiedTabs": true,
-    "terminal.integrated.fontSize": 15
+    "terminal.integrated.fontSize": 15,
+    "files.autoSave": "onFocusChange"
 }
