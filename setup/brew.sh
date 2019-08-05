@@ -16,3 +16,4 @@ brew cask install iterm2
 brew cask install spotify
 brew cask install whatsapp
 brew cask install vlc
+brew cask install spectacle
