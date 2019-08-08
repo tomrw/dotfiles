@@ -33,6 +33,9 @@ defaults write com.apple.AppleMultitouchTrackpad FirstClickThreshold -int 0
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
+# Battery
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
 # Restart everything
 for app in "Dock" \
 	"Finder"; do
