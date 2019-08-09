@@ -41,7 +41,7 @@ defaults write com.apple.menuextra.clock DateFormat "EEE d MMM  h:mm a"
 
 # Restart everything
 for app in "Dock" \
-	"SystemUIServer"
+	"SystemUIServer" \
 	"Finder"; do
 	killall "${app}" &> /dev/null
 done
