@@ -142,3 +142,9 @@ removeAllTags() {
 createPR() {
 	hub pull-request $*
 }
+
+makeBranchOld() {
+	local branch=$(getBranch)
+
+	git branch -m $branch $branch-OLD
+}
