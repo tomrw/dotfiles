@@ -38,5 +38,6 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "explorer.confirmDragAndDrop": false,
-    "typescript.updateImportsOnFileMove.enabled": "always"
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "terminal.integrated.copyOnSelection": true
 }
