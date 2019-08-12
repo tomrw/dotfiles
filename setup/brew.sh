@@ -16,3 +16,5 @@ brew cask install spotify
 brew cask install whatsapp
 brew cask install vlc
 brew cask install spectacle
+brew cask install postman
+brew cask install virtualbox
