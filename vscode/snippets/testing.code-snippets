@@ -16,5 +16,11 @@
     "prefix": "it",
     "body": ["it('should $2', () => {", "\t$3", "})"],
     "description": "Add test"
+  },
+  "Expect": {
+    "scope": "javascript,typescript",
+    "prefix": "exp",
+    "body": ["expect($1).toEqual($2)"],
+    "description": "Expect 'a' to equal 'b'"
   }
 }
