@@ -41,5 +41,9 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "terminal.integrated.copyOnSelection": true,
     "editor.snippetSuggestions": "top",
-    "editor.quickSuggestionsDelay": 0
+    "editor.quickSuggestionsDelay": 0,
+    "update.showReleaseNotes": false,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "git.autofetch": true
 }
