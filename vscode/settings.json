@@ -26,7 +26,7 @@
     "files.insertFinalNewline": true,
     "eslint.autoFixOnSave": true,
     "explorer.openEditors.visible": 0,
-    "extensions.ignoreRecommendations": false,
+    "extensions.ignoreRecommendations": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "workbench.commandPalette.preserveInput": true,
     "githubPullRequests.telemetry.enabled": false,
