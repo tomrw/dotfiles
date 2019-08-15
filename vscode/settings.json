@@ -9,13 +9,14 @@
     "editor.renderWhitespace": "all",
     "files.trimTrailingWhitespace": true,
     "files.exclude": {
-        "coverage": true,
-        "node_modules": true,
-        "production": true,
         ".vscode": true,
+        "android": true,
+        "coverage": true,
         "dist": true,
         "ios": true,
-        "android": true
+        "lib": true,
+        "node_modules": true,
+        "production": true
     },
     "window.zoomLevel": 1,
     "editor.tabCompletion": false,
