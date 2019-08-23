@@ -20,3 +20,11 @@ function k8deploy() {
 		kubectl -n default edit deployment $1
 	fi
 }
+
+function k8configMap() {
+	kubectl get configmap -o yaml $@
+}
+
+function k8podInfo() {
+	kubectl get pods --selector=app=$@
+}
