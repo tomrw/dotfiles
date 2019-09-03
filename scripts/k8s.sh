@@ -28,3 +28,14 @@ function k8configMap() {
 function k8podInfo() {
 	kubectl get pods --selector=app=$@
 }
+
+function k8exec() {
+	if [ "$1" = "" ]; then
+		echo "Please specify what to exec"
+		return 0
+	fi
+
+	local namespace=${2:-default}
+
+	kubectl -n $namespace exec -ti $1 sh
+}
