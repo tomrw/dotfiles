@@ -3,7 +3,19 @@ function k8validate() {
 }
 
 function k8cron() {
-	kubectl get cronjob $1
+	kubectl get cronjob $@
+}
+
+function k8createCron() {
+	if [ "$1" = "" ]; then
+		echo "Please specify what cron to run"
+		return 0
+	fi
+
+	local namespace=${2:-default}
+	local timestamp=$(date +%s)
+
+	kubectl create job --from=cronjob/$1 $1-$timestamp -n $namespace
 }
 
 function k8deploy() {
