@@ -28,6 +28,7 @@ declare -a vsCodeExtensions=(
 	"wix.vscode-import-cost"
 	"xabikos.JavaScriptSnippets"
 	"yzhang.markdown-all-in-one"
+	"kisstkondoros.vscode-codemetrics"
 )
 
 for extension in "${vsCodeExtensions[@]}"
