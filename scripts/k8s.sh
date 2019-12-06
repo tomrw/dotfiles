@@ -34,11 +34,15 @@ function k8deploy() {
 }
 
 function k8configMap() {
-	kubectl get configmap -o yaml $@
+	local namespace=${2:-default}
+
+	kubectl get configmap -o yaml $1 -n $namespace
 }
 
 function k8podInfo() {
-	kubectl get pods --selector=app=$@
+	local namespace=${2:-default}
+
+	kubectl get pods --selector=app=$1 -n $namespace
 }
 
 function k8exec() {
@@ -50,4 +54,15 @@ function k8exec() {
 	local namespace=${2:-default}
 
 	kubectl -n $namespace exec -ti $1 sh
+}
+
+function k8logs() {
+	if [ "$1" = "" ]; then
+		echo "Please specify what to log"
+		return 0
+	fi
+
+	local namespace=${2:-default}
+
+	kubectl logs -f deployment/$1 --all-containers=true
 }
