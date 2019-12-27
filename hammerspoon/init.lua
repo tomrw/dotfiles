@@ -75,7 +75,7 @@ end)
 launchMode:bind({ 'ctrl' }, 'space', function() leaveMode() end)
 
 -- Mapped keys
-launchMode:bind({}, 'c',  function() switchToApp('Visual Studio Code.app') end)
+launchMode:bind({}, 'c',  function() switchToApp('Calendar.app') end)
 launchMode:bind({}, 'f',  function() switchToApp('Firefox.app') end)
 launchMode:bind({}, 'i',  function() switchToApp('iTerm.app') end)
 launchMode:bind({}, 'm',  function() switchToApp('Mail.app') end)
