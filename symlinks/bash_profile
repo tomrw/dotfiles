@@ -74,3 +74,9 @@ if [ -f ~/google-cloud-sdk/path.bash.inc ]; then . ~/google-cloud-sdk/path.bash.
 if [ -f ~/google-cloud-sdk/completion.bash.inc ]; then . ~/google-cloud-sdk/completion.bash.inc; fi
 
 eval "$(pipenv --completion)"
+
+export HISTSIZE=50000
+export HISTFILESIZE=50000
+export HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
