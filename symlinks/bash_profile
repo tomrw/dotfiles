@@ -33,6 +33,22 @@ batchExec() {
 	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && $args" \;
 }
 
+use() {
+	git fetch origin
+
+	if [ $1 ]; then
+		git checkout $1
+	fi
+
+	if [ -f .nvmrc ]; then
+		nvm install $(cat .nvmrc)
+	fi
+
+	if [ -f package.json ]; then
+		yarn
+	fi
+}
+
 set -o vi
 
 export NVM_DIR=~/.nvm
