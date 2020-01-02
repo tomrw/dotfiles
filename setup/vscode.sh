@@ -29,6 +29,9 @@ declare -a vsCodeExtensions=(
 	"xabikos.JavaScriptSnippets"
 	"yzhang.markdown-all-in-one"
 	"kisstkondoros.vscode-codemetrics"
+	"jianbingfang.dupchecker"
+	"ms-python.python"
+	"softwaredotcom.swdc-vscode"
 )
 
 for extension in "${vsCodeExtensions[@]}"
