@@ -40,6 +40,11 @@ use() {
 		git checkout $1
 	fi
 
+	if [[ ! `git status --porcelain` ]]; then
+		git pull
+		git reset --hard origin/$1
+	fi
+
 	if [ -f .nvmrc ]; then
 		nvm install $(cat .nvmrc)
 	fi
