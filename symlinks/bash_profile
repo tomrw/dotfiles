@@ -34,15 +34,14 @@ batchExec() {
 }
 
 use() {
-	git fetch origin
+	local branch=${1:-master}
 
-	if [ $1 ]; then
-		git checkout $1
-	fi
+	git fetch origin
+	git checkout $branch
 
 	if [[ ! `git status --porcelain` ]]; then
 		git pull
-		git reset --hard origin/$1
+		git reset --hard origin/$branch
 	fi
 
 	if [ -f .nvmrc ]; then
