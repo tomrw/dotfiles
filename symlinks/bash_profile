@@ -51,6 +51,10 @@ use() {
 	if [ -f package.json ]; then
 		yarn
 	fi
+
+	if [ -f lerna.json ] && [ $(which lerna) ]; then
+		lerna bootstrap
+	fi
 }
 
 set -o vi
