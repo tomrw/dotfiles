@@ -48,5 +48,6 @@
   "telemetry.enableTelemetry": false,
   "git.autofetch": true,
   "window.newWindowDimensions": "maximized",
-  "terminal.integrated.shell.osx": "/bin/bash"
+  "terminal.integrated.shell.osx": "/bin/bash",
+  "eslint.migration.2_x": "off"
 }
