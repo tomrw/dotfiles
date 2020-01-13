@@ -10,3 +10,5 @@ alias ..="cd .."
 alias 2..=".. && .."
 alias 3..=".. && .. && .."
 alias cat=bat
+
+mkdir -p ~/workspace
