@@ -64,5 +64,5 @@ function k8logs() {
 
 	local namespace=${2:-default}
 
-	kubectl logs -n $namespace -f deployment/$1 --all-containers=true
+	kubectl logs -n $namespace -f deployment/$1 --all-containers=true --timestamps
 }
