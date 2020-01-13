@@ -66,3 +66,15 @@ function k8logs() {
 
 	kubectl logs -n $namespace -f deployment/$1 --all-containers=true --timestamps
 }
+
+declare -a k8Fns=(
+	"k8logs"
+	"k8podInfo"
+	"k8configMap"
+	"k8deploy"
+)
+
+for fn in "${k8Fns[@]}"
+do
+	complete -F _codeComplete $fn
+done

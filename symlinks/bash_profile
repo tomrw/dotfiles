@@ -88,3 +88,10 @@ export HISTFILESIZE=50000
 export HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
+_codeComplete()
+{
+    local cur=${COMP_WORDS[COMP_CWORD]}
+
+    COMPREPLY=( $(compgen -W "$(ls ~/workspace/; ls ~/workspace/**/packages)" -- $cur) )
+}
