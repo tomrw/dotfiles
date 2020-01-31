@@ -69,11 +69,38 @@ function k8logs() {
 	kubectl logs -n $namespace -f deployment/$1 --all-containers=true --timestamps
 }
 
+function k8editConfigMap() {
+	if [ "$1" = "" ]; then
+		echo "Please specify what to log"
+		return 0
+	fi
+
+	local namespace=${2:-default}
+
+	kubectl edit configmap $1 -n $namespace
+}
+
+function k8restart() {
+		if [ "$1" = "" ]; then
+		echo "Please specify what to log"
+		return 0
+	fi
+
+	local namespace=${2:-default}
+	local replicas=$(kubectl -n $namespace get deployment $1 -o=jsonpath='{.spec.replicas}')
+
+	kubectl -n $namespace scale deploy $1 --replicas=0
+	sleep 2
+	kubectl -n $namespace scale deploy $1 --replicas=$replicas
+}
+
 declare -a k8Fns=(
 	"k8logs"
 	"k8podInfo"
 	"k8configMap"
 	"k8deploy"
+	"k8editConfigMap"
+	"k8restart"
 )
 
 for fn in "${k8Fns[@]}"
