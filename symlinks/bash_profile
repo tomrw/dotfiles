@@ -35,6 +35,7 @@ batchExec() {
 
 use() {
 	local branch=${1:-master}
+	local isLernaMonoRepo=false
 
 	git fetch origin
 	git checkout $branch
@@ -42,6 +43,11 @@ use() {
 	if [[ ! `git status --porcelain` ]]; then
 		git pull
 		git reset --hard origin/$branch
+	fi
+
+	if [ $(basename $(dirname $(pwd))) = 'packages' ] && [ -f ../../lerna.json ]; then
+		isLernaMonoRepo=true
+		cd ../../
 	fi
 
 	if [ -f .nvmrc ]; then
@@ -54,6 +60,10 @@ use() {
 
 	if [ -f lerna.json ] && [ $(which lerna) ]; then
 		lerna bootstrap
+	fi
+
+	if [ isLernaMonoRepo = true ]; then
+		cd -
 	fi
 }
 
