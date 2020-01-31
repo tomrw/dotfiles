@@ -47,7 +47,7 @@ function k8podInfo() {
 	kubectl get pods --selector=app=$1 -n $namespace
 }
 
-function k8exec() {
+function k8image() {
 	if [ "$1" = "" ]; then
 		echo "Please specify what to exec"
 		return 0
