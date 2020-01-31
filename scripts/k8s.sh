@@ -44,7 +44,7 @@ function k8configMap() {
 function k8podInfo() {
 	local namespace=${2:-default}
 
-	kubectl get pods --selector=app=$1 -n $namespace
+	kubectl get pods --selector=app=$1 -w -n $namespace
 }
 
 function k8image() {
