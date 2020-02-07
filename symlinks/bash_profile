@@ -62,7 +62,7 @@ use() {
 		lerna bootstrap
 	fi
 
-	if [ isLernaMonoRepo = true ]; then
+	if [ isLernaMonoRepo=true ]; then
 		cd -
 	fi
 }
