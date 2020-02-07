@@ -5,7 +5,7 @@ function k8validate() {
 }
 
 function k8cron() {
-	kubectl get cronjob $@
+	kubectl get cronjob | grep $1
 }
 
 function k8createCron() {
@@ -101,6 +101,7 @@ declare -a k8Fns=(
 	"k8deploy"
 	"k8editConfigMap"
 	"k8restart"
+	"k8cron"
 )
 
 for fn in "${k8Fns[@]}"
