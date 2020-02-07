@@ -35,10 +35,14 @@ batchExec() {
 
 use() {
 	local branch=${1:-master}
-	local isLernaMonoRepo=false
+	local previousDir=$(pwd)
 
 	git fetch origin
 	git checkout $branch
+
+	if [ $branch = 'master' ] && [ $(which hub) ]; then
+		hub sync
+	fi
 
 	if [[ ! `git status --porcelain` ]]; then
 		git pull
@@ -46,7 +50,6 @@ use() {
 	fi
 
 	if [ $(basename $(dirname $(pwd))) = 'packages' ] && [ -f ../../lerna.json ]; then
-		isLernaMonoRepo=true
 		cd ../../
 	fi
 
@@ -62,9 +65,7 @@ use() {
 		lerna bootstrap
 	fi
 
-	if [ isLernaMonoRepo=true ]; then
-		cd -
-	fi
+	cd $previousDir
 }
 
 set -o vi
