@@ -6,6 +6,8 @@ brew install fzf
 brew install hub
 brew install pipenv
 brew install nvm
+brew install watch
+brew install kubeval
 
 brew cask install slack
 brew cask install docker
