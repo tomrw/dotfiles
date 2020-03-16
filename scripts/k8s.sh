@@ -44,7 +44,7 @@ function k8configMap() {
 function k8podInfo() {
 	local namespace=${2:-default}
 
-	kubectl get pods --selector=app=$1 -w -n $namespace
+	/usr/local/bin/watch kubectl get pods --selector=app=$1 -n $namespace
 }
 
 function k8image() {
@@ -81,7 +81,7 @@ function k8editConfigMap() {
 }
 
 function k8restart() {
-		if [ "$1" = "" ]; then
+	if [ "$1" = "" ]; then
 		echo "Please specify what to log"
 		return 0
 	fi
