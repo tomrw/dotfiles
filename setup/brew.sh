@@ -6,8 +6,8 @@ brew install fzf
 brew install hub
 brew install pipenv
 brew install nvm
+brew install kubectl
 brew install watch
-brew install kubeval
 
 brew cask install slack
 brew cask install docker
@@ -20,3 +20,4 @@ brew cask install vlc
 brew cask install spectacle
 brew cask install postman
 brew cask install virtualbox
+brew cask install clipy
