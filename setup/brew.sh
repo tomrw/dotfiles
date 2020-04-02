@@ -8,6 +8,7 @@ brew install pipenv
 brew install nvm
 brew install kubectl
 brew install watch
+brew install warrensbox/tap/tfswitch
 
 brew cask install slack
 brew cask install docker
@@ -21,3 +22,6 @@ brew cask install spectacle
 brew cask install postman
 brew cask install virtualbox
 brew cask install clipy
+brew cask install tableplus
+brew cask install lastpass
+brew cask install hammerspoon
