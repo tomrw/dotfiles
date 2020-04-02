@@ -148,3 +148,18 @@ makeBranchOld() {
 
 	git branch -m $branch $branch-OLD
 }
+
+updateAgainstMaster() {
+	local branch=$(getBranch)
+
+	if [ "$branch" = "master" ]; then
+		echo "Please choose a branch other than master"
+		return 0
+	fi
+
+	git checkout master
+	git pull origin master
+	git checkout -
+	git rebase master
+	git push --force-with-lease
+}
