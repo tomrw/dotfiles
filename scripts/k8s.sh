@@ -5,7 +5,10 @@ function k8validate() {
 }
 
 function k8cron() {
-	kubectl get cronjob | grep $1
+	local name=${1:-""}
+	local namespace=${2:-default}
+
+	kubectl get -n $namespace cronjob | grep $name
 }
 
 function k8createCron() {
@@ -92,6 +95,21 @@ function k8restart() {
 	kubectl -n $namespace scale deploy $1 --replicas=0
 	sleep 2
 	kubectl -n $namespace scale deploy $1 --replicas=$replicas
+}
+
+function k8cronLogs() {
+	if [ "$1" = "" ]; then
+		echo "Please specify what to log"
+		return 0
+	fi
+
+	local namespace=${2:-default}
+
+	name=$(kubectl get jobs -n $namespace --no-headers -o custom-columns=":metadata.name" --sort-by=.metadata.creationTimestamp | grep $1 | tail -1)
+
+	echo $name
+
+	kubectl logs job/$name -f -n $namespace
 }
 
 declare -a k8Fns=(
