@@ -7,6 +7,7 @@
 . ~/dotfiles/scripts/git.sh
 . ~/dotfiles/scripts/npm-completion.sh
 . ~/dotfiles/scripts/npm.sh
+. ~/dotfiles/scripts/dev.sh
 . ~/dotfiles/scripts/yarn.sh
 . ~/dotfiles/scripts/k8s.sh
 
@@ -31,41 +32,6 @@ batchExec() {
 	done
 
 	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && pwd && $args" \;
-}
-
-use() {
-	local branch=${1:-master}
-	local previousDir=$(pwd)
-
-	git fetch origin
-	git checkout $branch
-
-	if [ $branch = 'master' ] && [ $(which hub) ]; then
-		hub sync
-	fi
-
-	if [[ ! `git status --porcelain` ]]; then
-		git pull
-		git reset --hard origin/$branch
-	fi
-
-	if [ $(basename $(dirname $(pwd))) = 'packages' ] && [ -f ../../lerna.json ]; then
-		cd ../../
-	fi
-
-	if [ -f .nvmrc ]; then
-		nvm install $(cat .nvmrc)
-	fi
-
-	if [ -f package.json ]; then
-		yarn
-	fi
-
-	if [ -f lerna.json ] && [ $(which lerna) ]; then
-		lerna bootstrap
-	fi
-
-	cd $previousDir
 }
 
 set -o vi

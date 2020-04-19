@@ -101,6 +101,12 @@ pnb() {
 	git push -u origin $branch
 }
 
+gpfu() {
+	local branch=$(getBranch)
+
+	git push --set-upstream origin $branch --force-with-lease
+}
+
 rsh() {
 	local branch=$(getBranch)
 
