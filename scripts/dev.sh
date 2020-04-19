@@ -8,6 +8,16 @@ nt() {
 	fi
 }
 
+ns() {
+	if [ -f package.json ]; then
+		npm run start
+	elif [ -f Pipfile ]; then
+		pipenv run start
+	else
+		echo "no start script found"
+	fi
+}
+
 use() {
 	local branch=${1:-master}
 	local previousDir=$(pwd)
