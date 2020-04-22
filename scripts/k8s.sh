@@ -97,6 +97,22 @@ function k8restart() {
 	kubectl -n $namespace scale deploy $1 --replicas=$replicas
 }
 
+function k8scale() {
+	if [ "$1" = "" ]; then
+		echo "Please specify what to log"
+		return 0
+	fi
+
+	if [ "$2" = "" ]; then
+		echo "Please specify the number of replicas"
+		return 0
+	fi
+
+	local namespace=${3:-default}
+
+	kubectl -n $namespace scale deploy $1 --replicas=$2
+}
+
 function k8cronLogs() {
 	if [ "$1" = "" ]; then
 		echo "Please specify what to log"
@@ -120,6 +136,7 @@ declare -a k8Fns=(
 	"k8editConfigMap"
 	"k8restart"
 	"k8cron"
+	"k8scale"
 )
 
 for fn in "${k8Fns[@]}"

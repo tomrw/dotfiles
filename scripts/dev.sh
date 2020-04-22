@@ -52,3 +52,11 @@ use() {
 
 	cd $previousDir
 }
+
+migrate() {
+	knex migrate:latest
+}
+
+rollback() {
+	knex migrate:rollback
+}
