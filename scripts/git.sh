@@ -30,6 +30,7 @@ alias reword="git commit --amend"
 alias grc="git rebase --continue"
 alias gpf="git push --force-with-lease"
 alias hash="git rev-parse HEAD"
+alias mostCommits="git shortlog -s -n --all --no-merges"
 
 getBranch() {
 	local branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)

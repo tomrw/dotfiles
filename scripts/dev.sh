@@ -1,3 +1,13 @@
+packageScriptExists() {
+	local exists=$(node -e "console.log(require('./package.json').scripts['$1'])")
+
+	if [[ $exists == "undefined" ]]; then
+		return 1
+	else
+		return 0
+	fi
+}
+
 nt() {
 	if [ -f package.json ]; then
 		npm run test
@@ -51,6 +61,15 @@ use() {
 	fi
 
 	cd $previousDir
+}
+
+function wt() {
+	if [ -f package.json ]; then
+		packageScriptExists test:watch && npm run test:watch
+		packageScriptExists watch-tests && npm run watch-tests
+	else
+		echo "No test script found"
+	fi
 }
 
 migrate() {
